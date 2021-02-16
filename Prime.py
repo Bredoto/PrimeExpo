@@ -1,8 +1,8 @@
 # The App produces the prime numbers in proper range
 import math
-N = 100
-m = 2
+N = 1000
 index = 0
+file  = open('prime.txt','a+')
 for i in range(3,N):
     m = 2
     while 1:
@@ -11,8 +11,10 @@ for i in range(3,N):
         else:
             m = m +1
             if m > i ** 0.5:
-                print(i)
+                print(i, end = ' ')
+                print(i, file = file, end = ' ')
                 break
+file.close()
 
 
 
